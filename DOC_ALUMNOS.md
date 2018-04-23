@@ -55,7 +55,7 @@ Para cada tarea de la asignatura, tras la realización de cada Pull-Request o la
 Descripción específica de cada tarea a realizar y los tests que serán realizados.
 
 ## Tarea 1
-Tarea de introducción. El fichero a entregar es un csv con el nombre del usuario de GitHub de la forma NombreDeUsuario.csv. Este csv contendrá dos campos, que serán el mismo nombre de usuario de Github otra vez y en la segunda columna el número de matricula de la universidad.
+Tarea de introducción. El fichero a entregar es un csv con el nombre del usuario de GitHub de la forma NombreDeUsuario.csv en la raiz del escritorio. Este csv contendrá dos campos, que serán el mismo nombre de usuario de Github otra vez y en la segunda columna el número de matricula de la universidad.
 
 Test realizados:
 * El fichero csv existe y se llama de forma correcta
@@ -65,4 +65,17 @@ Test realizados:
 
 ## Tarea 2
 
+Esta tarea consiste en crear un pequeño conjunto de datos en formato rdf y ttl, asi como un grafo de los mismos en formato png. Los archivos se subiran en la raiz del repositorio y se llamaran de la misma forma que el nombre de usuario del estudiante, de la forma NombreDeUsuario.png, NombreDeUsuario.rdf, NombreDeUsuario.ttl.
+
+Test realizados:
+* Los ficheros png, rdf y ttl existen y tienen el nombre correcto
+* Los ficheros rdf y ttl son validos sintacticamente
+
 ## Tarea 3
+
+Esta tarea consiste en realizar un codigo java usando la libreria Jena para trabajar con conjuntos de datos. Los archivos a completar se encuentran en src/main/java/upm/oeg/wsld/jena y son los denominados Task06 y Task07. Estos mismo archivos completados por el alumno se entregaran en un directorio en la raiz del repositorio denominado como el nombre de usuario de GitHub del alumno y su numero de matricula, de la forma siguiente: NombreDeUsuario-123456, en el cual se encontraran los ficheros Task06 y Task07 con ese nombre. El numero de matricula debe de ser el mismo que fue indicado en la tarea 1.
+
+Test realizados:
+* Los ficheros Task06 y Task07 existen
+* Los ficheros de las tareas compilan correctamente
+* Los ficheros pasan los tests de JUnit que se encuentran en src/test/java/upm/oeg/wsld/jena
