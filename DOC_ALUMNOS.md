@@ -76,6 +76,7 @@ Test realizados:
 Esta tarea consiste en realizar un codigo java usando la libreria Jena para trabajar con conjuntos de datos. Los archivos a completar se encuentran en src/main/java/upm/oeg/wsld/jena y son los denominados Task06 y Task07. Estos mismo archivos completados por el alumno se entregaran en un directorio en la raiz del repositorio denominado como el nombre de usuario de GitHub del alumno y su numero de matricula, de la forma siguiente: NombreDeUsuario-123456, en el cual se encontraran los ficheros Task06 y Task07 con ese nombre. El numero de matricula debe de ser el mismo que fue indicado en la tarea 1.
 
 Test realizados:
-* Los ficheros Task06 y Task07 existen
+* El directorio del alumno existe
+* Los ficheros Task06 y Task07 se encuentran en dicho directorio
 * Los ficheros de las tareas compilan correctamente
 * Los ficheros pasan los tests de JUnit que se encuentran en src/test/java/upm/oeg/wsld/jena
