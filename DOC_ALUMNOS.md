@@ -4,7 +4,34 @@ title: DOCUMENTACION ALUMNOS
 
 # Introducción
 
+En este documento se describira las tareas a realziar para la asignatura de Web Services and Linked Data del curso 2018/2019, asi como unas guias basicas de las herramientas a utilizar y su uso.
+
 ## Utilización básica de Git y GitHub
+
+ * En caso de aun no tenerla, crear una cuenta de GitHub. Esta será necesaria para realizar las Pull-Request a los repositorios de las asignaturas. 
+ * Instalar Git en vuestro sistema operativo. Existe una version portable para los que no quieran añadirlo a su espacio de trabajo.  
+ * Configurar Git de forma basica con los mandatos siguientes:
+ ```git
+ $ git config --global user.name "Your username here"
+ $ git config --global user.email your_mail@here.com
+ ```
+* Realizar una copia personal del repositorio desde GitHub con el botón fork en el extremo superior derecha, y añadirlo a la cuenta de usuario
+* Obtener el enlace de clonación mediante https y clonar este repositorio personal desde el terminal git con el mandato:
+```git
+$ git clone url
+```
+* Configurar un flujo upstream al repositorio original con el siguiente mandato:
+```git
+$ git remote add upstream https://github.com/FacultadInformatica-LinkedData/Curso2017-2018
+```
+Con esto el directorio para trabajar ya estaria listo, accede al mismo con el mandato cd y usa git de forma basica como se indica en esta guia [git basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+Para sincronizar el repositorio local con el original realizar:
+```git
+$ git fetch upstream
+$ git checkout master
+$ git merge upstream/master
+```
+Estos pasos se tendran que realizar con cada uno de los repositorios de las tareas
 
 ## Acerca de la estructura del repositorio
 
