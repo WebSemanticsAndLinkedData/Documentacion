@@ -35,19 +35,33 @@ Estos pasos se tendran que realizar con cada uno de los repositorios de las tare
 
 ## Acerca de la estructura del repositorio
 
-La estructura de la organización de la asignatura estará dividida en diferentes repositorios donde se subiran los entregables de cada tarea correspondiente de la forma que se explicará a continuación.
+La estructura de la organización de la asignatura estará dividida en diferentes repositorios donde se subiran los ficheros relevantes de cada una de las tareas, y a los cuales habra que subir el trabajo realizado por los alumnos.
 
 ## Acerca de las entregas
 
-La entrega de las tareas se realizara mediante la interfaz web de GitHub, realizando una Pull-Request al repositorio principal de la asignatura. Para esto los alumnos deberan hacer un fork propio de cada uno de los repositorios en su propia cuenta de usuario.
+La entrega de las tareas se realizara mediante la interfaz web de GitHub, realizando una Pull-Request al repositorio principal de la asignatura. Para esto los alumnos despues de realizar los pasos descritos en la sección inicial sobre git deberan realizar push a su repositorio personal
+```
+$ git add [archivos a entregar]
+$git commit -m "mensaje descriptivo"
+$git push
+```
+Una vez realizado esto, acceder al repositorio desde la interfaz web de Github y realizar una Pull-Request pulsando el botón con ese mismo nombre debajo del botón para clonar.
 
 ## Acerca de la Integración Continua y las pruebas
 
-Para cada tarea de la asignatura, tras la realización de cada Pull-Request o la actualización de los ficheros de la misma, un servicio externo evaluara automaticamente el estado del repositorio para comprobar que se hayan entregado los ficheros con la denominación correcta, ademas de en algunos casos se pasaran tests mas especificos para detectar errores. Estos resultados se veran reflejados en un comentario en la misma Pull-Request. Además, los alumnos puede consultar los logs de los tests visitando el link que aparecera en las Pull-Requests.
+Para cada tarea de la asignatura, tras la realización de cada Pull-Request o la actualización de los ficheros de la misma, un servicio externo evaluara automaticamente el estado del repositorio para comprobar que se hayan entregado los ficheros con la denominación correcta. Además, en algunos casos se pasaran tests mas especificos para detectar errores y comprobar el correcto funcionamiento de los entregables. Estos resultados se veran reflejados en un comentario en la misma Pull-Request, desde la cual tambien es posible consultar los logs de los tests realizados visitando el link que aparecera en las Pull-Requests.
 
 # Tareas
+Descripción específica de cada tarea a realizar y los tests que serán realizados.
 
 ## Tarea 1
+Tarea de introducción. El fichero a entregar es un csv con el nombre del usuario de GitHub de la forma NombreDeUsuario.csv. Este csv contendrá dos campos, que serán el mismo nombre de usuario de Github otra vez y en la segunda columna el número de matricula de la universidad.
+
+Test realizados:
+* El fichero csv existe y se llama de forma correcta
+* El fichero csv tiene dos campos
+
+**ATENCIÓN: Es importante que estos campos sean correctos ya que otras tareas dependeran de ellos.**
 
 ## Tarea 2
 
