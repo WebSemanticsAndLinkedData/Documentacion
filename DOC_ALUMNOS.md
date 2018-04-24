@@ -1,5 +1,5 @@
 ---
-title: DOCUMENTACION ALUMNOS
+title: WSDL 18/19 - Documentación Alumnos
 ---
 
 ## Utilización básica de Git y GitHub
