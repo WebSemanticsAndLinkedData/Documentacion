@@ -3,6 +3,7 @@ title: DOCUMENTACIÓN PROFESORES
 ---
 
 ## Estructura general de cada repositorio
+Todos los repositorios constaran de una carpeta llamada build donde se incluiran los scripts necesarios para realizar las builds. Aparte, en determinadas tareas pueden existir ficheros de prueba separados. Para mas detalle consultar la [descripción de los tests](https://webservicesandlinkeddata.github.io/Documentacion/DOC_PROFESORES#descripci%C3%B3n-de-los-tests-de-cada-tarea-de-la-asignatura)
 
 ## Acerca del sistema de integración continua elegido: Semaphore
 [Semaphore](https://semaphoreci.com/) ha sido elegido como la alternativa para realizar la integración continua de las tareas de la asignatura. Para comenzar, acceded a la web, hacer Log In con la cuenta de GitHub y concerde los permisos que solicita. Estos permisos se utilizan principalmente para enviar correos de notificación de las builds, que pueden ser desactivados en cualquier momento. Al iniciar sesión por primera vez se preguntara por el acceso a los repositorios y organizaciones que se quiere concederle, que pueden ser cambiado en cualquier momento mas tarde.
