@@ -2,10 +2,6 @@
 title: DOCUMENTACION ALUMNOS
 ---
 
-# Introducción
-
-En este documento se describira las tareas a realizar para la asignatura de Web Services and Linked Data del curso 2018/2019, asi como unas guias basicas de las herramientas a utilizar y su uso.
-
 ## Utilización básica de Git y GitHub
 
  * En caso de aun no tenerla, crear una cuenta de GitHub. Esta será necesaria para realizar las Pull-Request a los repositorios de las asignaturas. 
