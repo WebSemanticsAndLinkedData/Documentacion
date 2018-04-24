@@ -2,7 +2,9 @@
 title: DOCUMENTACIÓN PROFESORES
 ---
 
-# Acerca del sistema de integración continua elegido: Semaphore
+## Estructura general de cada repositorio
+
+## Acerca del sistema de integración continua elegido: Semaphore
 [Semaphore](https://semaphoreci.com/) ha sido elegido como la alternativa para realizar la integración continua de las tareas de la asignatura. Para comenzar, acceded a la web, hacer Log In con la cuenta de GitHub y concerde los permisos que solicita. Estos permisos se utilizan principalmente para enviar correos de notificación de las builds, que pueden ser desactivados en cualquier momento. Al iniciar sesión por primera vez se preguntara por el acceso a los repositorios y organizaciones que se quiere concederle, que pueden ser cambiado en cualquier momento mas tarde.
 
 ## Creación de builds para un repositorio en Semaphore
@@ -16,7 +18,7 @@ En esta pantalla realizaremos la configuración de prueba de la build. Se divide
 
 Instrucciones a ejecutar antes de realizar las tareas de prueba. Dado que estan tareas van a ser ejecutadas desde un script debemos darles accesos de ejecución con la instrucción:
 ```bash
-chmod +x fichero.sh
+chmod +x ficheroTest.sh
 ```
 Haremos esto por cada fichero bash que vayamos a ejecutar y tengamos en la carpeta build del repositorio.
 Además crearemos el fichero donde escribiremos los mensajes de error para más tarde leerlo y formar el comentario:
@@ -25,8 +27,19 @@ touch err
 ```
 
 ### Jobs
+Mandatos que se ejecutaran para comprobar si la build es válida o no. Principalmente llamara al script principal del directorio build que contendra todos las instrucciones necesarias. Esto se hara con la instrucción:
+```bash
+./build/ficheroTest.sh > err
+```
+Redireccionamos la salida al fichero err para escribir los mensajes de error y no obstaculizar la vista de los logs con estos mensajes.
+
+Existe la posibilidad de de crear Jobs paralelos que ejecuten tareas de forma simultanea, teniendo en cuenta que deben ser independientes ya que se ejecutan en entornos separados.
 
 ### After Job
+Por último configuramos las instrucciones a ejecutar al terminar la build. Principalmente se llamara al fichero que realiza el envio de comentarios:
+```bash
+./build/comment.sh
+```
 
 ## Variables de entornos utilizadas
 Para el correcto funcionamiento de muchos de los archivos de prueba es necesario incluir información delicada como Tokens de autorización API y demás. Para ello Semaphore cuenta con un sistema de variables de entorno que podemos acceder desde la sección *Project Settings > Environment Variables* de cada uno de los proyectos de Integración Continua. Allí pulsaremos *+ Add* y añadiremos la variable **TOKEN** que tendra como valor la clave API del usuario a relizar los comentarios. Por último marcaremos la casilla *Encrypt content* para reforzar la seguridad de la misma. 
