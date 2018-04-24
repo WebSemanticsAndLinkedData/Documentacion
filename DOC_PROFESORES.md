@@ -46,11 +46,30 @@ Por último configuramos las instrucciones a ejecutar al terminar la build. Prin
 Para el correcto funcionamiento de muchos de los archivos de prueba es necesario incluir información delicada como Tokens de autorización API y demás. Para ello Semaphore cuenta con un sistema de variables de entorno que podemos acceder desde la sección *Project Settings > Environment Variables* de cada uno de los proyectos de Integración Continua. Allí pulsaremos *+ Add* y añadiremos la variable **TOKEN** que tendra como valor la clave API del usuario a relizar los comentarios. Por último marcaremos la casilla *Encrypt content* para reforzar la seguridad de la misma. 
 
 ## Consulta de resultados de las builds
+En el panel de control del proyecto en Semaphore se puede consultar el estado de todas las builds realizadas haciendo click en la rama que se quiera observar o de la Pull Request a revisar. Haciendo click en el estado de una build podremos la salida por pantalla que ha producido cada mandato de ejecución.
 
 # Descripción de los tests de cada tarea de la asignatura
+Aquí se describiran los ficheros de prueba de cada una de las tareas de una forma similar a pseudocodigo.
+
+#### comment.sh
+Este fichero es común a todas las tareas por lo que será descritó aqui de forma común
+1. Comprueba si el fichero *err* existe y no está vacio
+    1. Si existe se parsea su contenido con el mandato *sed* para reemplazar carácteres invalidos para el Json
+    2. Si no existe se establece un mensaje de exito por defecto
+2. Se realiza la petición API para enviar el comentario
 
 ## Tests tarea 1
+#### testCSV.sh
+1. Inicializa la variable de error a 0
+2. Obtiene mediante una petición API a GitHub los datos de la Pull Request que son parseados con jq y se obtiene el nombre de usuario
+3. Se comprueba si existe el fichero NombreDeUsuario.csv
+    1. Si no existe muestra un mensaje de error y sale
+    2. Si existe comprueba si todas las lineas tienen dos campos
+        1. Si no se cumple se muestra un mensaje de error y sale
+        2. Si se cumple no hace nada
+4. Termina y sale con estado el número de errores encontrados
 
 ## Tests tarea 2
+
 
 ## Tests tarea 3
