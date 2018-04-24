@@ -59,6 +59,7 @@ Este fichero es común a todas las tareas por lo que será descritó aqui de for
 2. Se realiza la petición API para enviar el comentario
 
 ## Tests tarea 1
+En esta tarea se ejecuta un script simple que evalua el fichero CSV.
 #### testCSV.sh
 1. Inicializa la variable de error a 0
 2. Obtiene mediante una petición API a GitHub los datos de la Pull Request que son parseados con jq y se obtiene el nombre de usuario
@@ -70,6 +71,31 @@ Este fichero es común a todas las tareas por lo que será descritó aqui de for
 4. Termina y sale con estado el número de errores encontrados
 
 ## Tests tarea 2
+En esta tarea para realizar los tests, se ejecuta un *jar* pre-compilado por parte del profesor y se analizan los ficheros entregados por el alumno. Este *jar* se encuentra en la carpeta test.
 
+#### testAssignment2.sh
+1. Inicializa variables de error a 0 y falso
+2. Obtiene mediante una petición API a GitHub los datos de la Pull Request que son parseados con jq y se obtiene el nombre de usuario
+3. Se comprueba si existe el fichero NombreDeUsuario.rdf
+    1. Si no existe muestra un mensaje y activa una variable de error
+4. Se comprueba si existe el fichero NombreDeUsuario.ttl
+    1. Si no existe muestra un mensaje y activa una variable de error
+5. Se comprueba si existe el fichero NombreDeUsuario.png
+    1. Si no existe muestra un mensaje de error
+6. Si los dos ficheros rdf y ttl existen se realizan los tests ejecutando un fichero jar
+    1. El estado de salida del mandato de ejecución de los tests se añade a la variable de error
+7. Sale con el estado de error acumulado
 
 ## Tests tarea 3
+En esta tarea se compila el codigo del alumno usando maven y se proceden a ejecutar los tests.
+
+#### compileTasks.sh
+1. Inicializa variables de error a 0
+2. Obtiene mediante una petición API a GitHub los datos de la Pull Request que son parseados con jq y se obtiene el nombre de usuario
+3. Se comprueba si existe el directorio NombreDeUsuario-NumMatricula
+    1. Si no existe muestra un mensaje y sale
+    2. Si existe copia todos los ficheros del alumno al directorio src y compila con maven
+        1. Si hay problemas en la compilación muestra mensaje y sale
+        2. Si no hay errores de compilación se procede a ejecutar los tests
+            1. Si los tests no termina correctamente se imprime mensaje de error
+4. El programa termina y sale con el estado de error
