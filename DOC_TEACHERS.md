@@ -1,12 +1,12 @@
 ---
-title: WSDL 18/19 - Documentación Profesores 
+title: WSDL 18/19 - Teachers' Documentation 
 ---
 
-## Estructura general de cada repositorio
-Todos los repositorios constaran de una carpeta llamada build donde se incluiran los scripts necesarios para realizar las builds. Aparte, en determinadas tareas pueden existir ficheros de prueba separados. Para mas detalle consultar la [descripción de los tests](https://webservicesandlinkeddata.github.io/Documentacion/DOC_PROFESORES#descripci%C3%B3n-de-los-tests-de-cada-tarea-de-la-asignatura)
+## General structure of each repository
+All the repositories will have a directory build where the files involved in testing the assignments will be kept. In specific assignments there can be separated files used for testing because of requeriments of other tools (example: maven in the third assignment)
 
-## Acerca del sistema de integración continua elegido: Semaphore
-[Semaphore](https://semaphoreci.com/) ha sido elegido como la alternativa para realizar la integración continua de las tareas de la asignatura. Para comenzar, acceded a la web, hacer Log In con la cuenta de GitHub y concerde los permisos que solicita. Estos permisos se utilizan principalmente para enviar correos de notificación de las builds, que pueden ser desactivados en cualquier momento. Al iniciar sesión por primera vez se preguntara por el acceso a los repositorios y organizaciones que se quiere concederle, que pueden ser cambiado en cualquier momento mas tarde.
+## About the continuous integration service chosen: Semaphore
+[Semaphore](https://semaphoreci.com/) has been chosen as the tool used to keep continuous integrated the repositories. To get started, login in their web with your github credentials and grant the permissions it requires. These permissions will be used to send mail notifications which can be disabled from the settings menu. On your first login in the service a windows will be shown to grant access to the services to all repositories you want to test. You can select them now, or add them manually later.
 
 ## Creación de builds para un repositorio en Semaphore
 Para comenzar a realizar Integración continua sobre un repositorio, seleccionar en la parte superior de la web el botón de *Create New > Project*. Desde esa pantalla añadir el repositorio que se quiera en la sección correspondiente de la organización. En caso de que la organización no aparezca deberemos darle permisos, para ello, acudiremos a GitHub y accederemos en nuestro perfil *Settings > Applications > Authorized OAuth Apps > Semaphore* y en la parte inferior veremos todas las organizaciones a las se pertenece y daremos acceso con el botón *Grant* correspondiente de la misma.

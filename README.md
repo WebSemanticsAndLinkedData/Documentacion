@@ -1,11 +1,11 @@
-# Bienvenido a la documentación de la asignatura de Web Services and Linked Data del curso 2018/2019
+# Welcome to the documentation of the subject of Web of Linked Data and Semantics Web 2018/2019
 
-## Introducción
+## Introduction
 
-En este documento se describira las tareas a realizar para la asignatura de Web Services and Linked Data del curso 2018/2019, asi como unas guias basicas de las herramientas a utilizar y su uso.
+On this web you will find description to all asignments of the subject, as well as some basic guides on the tools to use.
 
-## [Documentación para alumnos](https://webservicesandlinkeddata.github.io/Documentacion/DOC_ALUMNOS) 
-Sobre Git, Github y las tareas a realizar
+## [Students' Documentation](https://webservicesandlinkeddata.github.io/Documentacion/DOC_STUDENTS) 
+About Git, Github and each one of the assignments
 
-## [Documentación para profesores](https://webservicesandlinkeddata.github.io/Documentacion/DOC_PROFESORES)
-Sobre los servicios de Integración continua y ficheros de prueba
+## [Teachers' Documentation](https://webservicesandlinkeddata.github.io/Documentacion/DOC_TEACHERS)
+About the continuou integration services and tests

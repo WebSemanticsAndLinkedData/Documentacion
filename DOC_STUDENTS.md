@@ -57,40 +57,7 @@ After these tests have passed, a message will be submitted to your pull request 
 # Assignments
 You can find descriptions of each one of the assignments in the next links:
 
- * [Assignment 1] TODO
- * [Assignment 2] TODO
- * [Assignment 3] TODO
+ * [Assignment 1](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_1)
+ * [Assignment 2](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_2)
+ * [Assignment 3](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_3)
  
- 
- 
- 
- 
- 
- 
- 
-## Tarea 1
-Tarea de introducción. El fichero a entregar es un csv con el nombre del usuario de GitHub de la forma NombreDeUsuario.csv en la raiz del escritorio. Este csv contendrá dos campos, que serán el mismo nombre de usuario de Github otra vez y en la segunda columna el número de matricula de la universidad.
-
-Test realizados:
-* El fichero csv existe y se llama de forma correcta
-* El fichero csv tiene dos campos
-
-**ATENCIÓN: Es importante que estos campos sean correctos ya que otras tareas dependeran de ellos.**
-
-## Tarea 2
-
-Esta tarea consiste en crear un pequeño conjunto de datos en formato rdf y ttl, asi como un grafo de los mismos en formato png. Los archivos se subiran en la raiz del repositorio y se llamaran de la misma forma que el nombre de usuario del estudiante, de la forma NombreDeUsuario.png, NombreDeUsuario.rdf, NombreDeUsuario.ttl.
-
-Test realizados:
-* Los ficheros png, rdf y ttl existen y tienen el nombre correcto
-* Los ficheros rdf y ttl son validos sintacticamente
-
-## Tarea 3
-
-Esta tarea consiste en realizar un codigo java usando la libreria Jena para trabajar con conjuntos de datos. Los archivos a completar se encuentran en src/main/java/upm/oeg/wsld/jena y son los denominados Task06 y Task07. Estos mismo archivos completados por el alumno se entregaran en un directorio en la raiz del repositorio denominado como el nombre de usuario de GitHub del alumno y su numero de matricula, de la forma siguiente: NombreDeUsuario-123456, en el cual se encontraran los ficheros Task06 y Task07 con ese nombre. El numero de matricula debe de ser el mismo que fue indicado en la tarea 1.
-
-Test realizados:
-* El directorio del alumno existe
-* Los ficheros Task06 y Task07 se encuentran en dicho directorio
-* Los ficheros de las tareas compilan correctamente
-* Los ficheros pasan los tests de JUnit que se encuentran en src/test/java/upm/oeg/wsld/jena
