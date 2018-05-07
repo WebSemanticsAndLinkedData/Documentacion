@@ -8,36 +8,40 @@ All the repositories will have a directory build where the files involved in tes
 ## About the continuous integration service chosen: Semaphore
 [Semaphore](https://semaphoreci.com/) has been chosen as the tool used to keep continuous integrated the repositories. To get started, login in their web with your github credentials and grant the permissions it requires. These permissions will be used to send mail notifications which can be disabled from the settings menu. On your first login in the service a windows will be shown to grant access to the services to all repositories you want to test. You can select them now, or add them manually later.
 
-## Creación de builds para un repositorio en Semaphore
-Para comenzar a realizar Integración continua sobre un repositorio, seleccionar en la parte superior de la web el botón de *Create New > Project*. Desde esa pantalla añadir el repositorio que se quiera en la sección correspondiente de la organización. En caso de que la organización no aparezca deberemos darle permisos, para ello, acudiremos a GitHub y accederemos en nuestro perfil *Settings > Applications > Authorized OAuth Apps > Semaphore* y en la parte inferior veremos todas las organizaciones a las se pertenece y daremos acceso con el botón *Grant* correspondiente de la misma.
+## Configuring builds for a repository on Semaphore
+To start making tests continous integration in a repository, click on the top section on the "*Create new > Project*" and select the repository you want. If the repository is part of an organization you will need to have granted Semaphore access to it. You can do it in Github in your profile in "*Settings > Applications > Authorized OAuth Apps > Semaphore*" and on the bottom section you will see a.ll organizations you can grant access to. Click "*Grant*" to the organization of the subject to set up the repositories in semaphore. Keep in mind that these changes may take a few minutes to be shown in the semaphore webpage.
 
-Una vez hecho esto, quizás tengamos que esperar unos minutos para que los cambios se vean reflejados en la web de semaphore, pero cuando lo esten, seleccionar el respositorio que se quiere integrar, asi como la rama principal de prueba y el propietario del proyecto.
-Después de esto, un escaneo automático comenzará para detectar el lenguaje por defecto, que podemos omitir pulsando *Skip the analysis* e indicarlo manualmente en la siguiente pantalla.
-En esta pantalla realizaremos la configuración de prueba de la build. Se divide en tres secciones principales:
+Once this is done and you have selected the specific repository you want, you will have to choose one branch to test, usually master, and the owner of the project in semaphore. After this, an automatic scan will start to detect the main language of the repository. You can skip this step if you want clicking "*Skip the analysis*" as you can select the language manually in the next screen.
+
+Now you will select the specific characteristics of the build of each repository. It is divided in three sections:
+
+Note: You can now select the language on a drop-down on the top. This language will be used to set up the specific environment needed to test that language. For tests that are not specific for a programming language select "*Other*"
 
 ### Setup
 
-Instrucciones a ejecutar antes de realizar las tareas de prueba. Dado que estan tareas van a ser ejecutadas desde un script debemos darles accesos de ejecución con la instrucción:
+Instructions to be executed before doing any test task. These are usually configuration tasks for other files, set up variables, paths, etc.
+
+For this specific use case of the subject, first grant execution permission to the scripts files used in the builds.
 ```bash
-chmod +x ficheroTest.sh
+chmod +x ./build/scriptFile.sh
 ```
-Haremos esto por cada fichero bash que vayamos a ejecutar y tengamos en la carpeta build del repositorio.
-Además crearemos el fichero donde escribiremos los mensajes de error para más tarde leerlo y formar el comentario:
+We will do a command like this for every bash file which is going to be used in the build directory of the repository
+We will also create an empty file "*err*" to write the results of the tests if something goes wrong:
 ```bash
 touch err
 ```
 
 ### Jobs
-Mandatos que se ejecutaran para comprobar si la build es válida o no. Principalmente llamara al script principal del directorio build que contendra todos las instrucciones necesarias. Esto se hara con la instrucción:
+This instructions are the core of the continuous integration build and will mark the build as valid if all instructions are completed with exit status 0, or failed in any other case. Mainly we will call here the scripts we granted execution permissions in the setup step:
 ```bash
-./build/ficheroTest.sh > err
+./build/ficheroTest.sh 2> err
 ```
-Redireccionamos la salida al fichero err para escribir los mensajes de error y no obstaculizar la vista de los logs con estos mensajes.
+We redirect the standard error output to the "*err*" file we created before. This is done to check later if there were any errors (the "*err*" file wont be emtpy) and to not fill the logs of the build with those error messages.
 
-Existe la posibilidad de de crear Jobs paralelos que ejecuten tareas de forma simultanea, teniendo en cuenta que deben ser independientes ya que se ejecutan en entornos separados.
+There is an option to create parallel jobs which would be executed at the same time. This can be used to speed up the process of testing. In this specific use case there doesnt seem to be a lot of opportunities to do something like that because most tests rely on the previous ones having passed, but it is interesting to mention because it can be helpful in the future in other tasks. 
 
 ### After Job
-Por último configuramos las instrucciones a ejecutar al terminar la build. Principalmente se llamara al fichero que realiza el envio de comentarios:
+Finally, we configure the instructions to be executed when the build is finishing. In this case we will call the script file in charge of creating the comments in the pull-request tested in Github.
 ```bash
 ./build/comment.sh
 ```
@@ -47,6 +51,11 @@ Para el correcto funcionamiento de muchos de los archivos de prueba es necesario
 
 ## Consulta de resultados de las builds
 En el panel de control del proyecto en Semaphore se puede consultar el estado de todas las builds realizadas haciendo click en la rama que se quiera observar o de la Pull Request a revisar. Haciendo click en el estado de una build podremos la salida por pantalla que ha producido cada mandato de ejecución.
+
+
+
+
+
 
 # Descripción de los tests de cada tarea de la asignatura
 Aquí se describiran los ficheros de prueba de cada una de las tareas de una forma similar a pseudocodigo.
@@ -61,6 +70,10 @@ Este fichero es común a todas las tareas por lo que será descritó aqui de for
 ## Tests tarea 1
 En esta tarea se ejecuta un script simple que evalua el fichero CSV.
 #### testCSV.sh
+Language: Other
+Setup:
+Jobs:
+After Job:
 1. Inicializa la variable de error a 0
 2. Obtiene mediante una petición API a GitHub los datos de la Pull Request que son parseados con jq y se obtiene el nombre de usuario
 3. Se comprueba si existe el fichero NombreDeUsuario.csv
