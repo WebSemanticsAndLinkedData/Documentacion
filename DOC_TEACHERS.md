@@ -46,12 +46,15 @@ Finally, we configure the instructions to be executed when the build is finishin
 ./build/comment.sh
 ```
 
-## Variables de entornos utilizadas
-Para el correcto funcionamiento de muchos de los archivos de prueba es necesario incluir información delicada como Tokens de autorización API y demás. Para ello Semaphore cuenta con un sistema de variables de entorno que podemos acceder desde la sección *Project Settings > Environment Variables* de cada uno de los proyectos de Integración Continua. Allí pulsaremos *+ Add* y añadiremos la variable **TOKEN** que tendra como valor la clave API del usuario a relizar los comentarios. Por último marcaremos la casilla *Encrypt content* para reforzar la seguridad de la misma. 
+## Environment variables
+For the correct functioning of some scripts it is needed to include sensitive information as authorization tokens to make api requests. This values cannot be stored in plaintext in the scripts directly as it would be a security risk, so we use the environment variables feature in Semaphore.
 
-## Consulta de resultados de las builds
-En el panel de control del proyecto en Semaphore se puede consultar el estado de todas las builds realizadas haciendo click en la rama que se quiera observar o de la Pull Request a revisar. Haciendo click en el estado de una build podremos la salida por pantalla que ha producido cada mandato de ejecución.
+Under every repository we can go to the section "*Project Settings > Environment Variables*" and setup there all the variables needed for the tests. In this specific use case we will press *+ Add* and create a environment variable called "**TOKEN**" with value the actual string of characters that represent the token authorization of the github user to create the comments. Finally, check the "*Encrypt content*" to make the variable more secure in case of security flaws.
 
+Note: The github api token can be acquired in Github in "*Settings > Developer Settings > Personal access tokens*". It is recommended to have a dummy or specific user for this as in case the token is leaked there is no risk involving the ownership of the repositories.
+
+## Consulting the result of the builds
+In the dashboard in the main page of semaphore you can see listed all repositories added and a symbol indicating the result of the latest build tested. Clicking on each repository you can see a detailed view of all actions taken, including builds, and you can click them to consult the logs the build generated.
 
 
 
