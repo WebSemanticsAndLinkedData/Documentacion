@@ -56,12 +56,17 @@ Note: The github api token can be acquired in Github in "*Settings > Developer S
 ## Consulting the result of the builds
 In the dashboard in the main page of semaphore you can see listed all repositories added and a symbol indicating the result of the latest build tested. Clicking on each repository you can see a detailed view of all actions taken, including builds, and you can click them to consult the logs the build generated.
 
+# Description of the test of each assignment
+Here there is a list of links to the specific documentation about the continuous integration of each task.
 
-
-
-
-# Descripción de los tests de cada tarea de la asignatura
-Aquí se describiran los ficheros de prueba de cada una de las tareas de una forma similar a pseudocodigo.
+	* [Common test files to all tasks]( TODO )
+	* [Task 1 CI]( TODO )
+	* [Task 2 CI]( TODO )
+	* [Task 3 CI]( TODO )
+	
+	
+	
+	
 
 #### comment.sh
 Este fichero es común a todas las tareas por lo que será descritó aqui de forma común
