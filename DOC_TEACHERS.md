@@ -60,9 +60,9 @@ In the dashboard in the main page of semaphore you can see listed all repositori
 Here there is a list of links to the specific documentation about the continuous integration of each task.
 
 	* [Common test files to all tasks]( TODO )
-	* [Task 1 CI]( TODO )
-	* [Task 2 CI]( TODO )
-	* [Task 3 CI]( TODO )
+	* [Assignment 1 CI]( TODO )
+	* [Assignment 2 CI]( TODO )
+	* [Assignment 3 CI]( TODO )
 	
 	
 	
