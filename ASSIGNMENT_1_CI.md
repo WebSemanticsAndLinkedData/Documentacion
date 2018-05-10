@@ -1,15 +1,39 @@
 ---
-title: WSLD 18/19 - Assignment 1 - Teachers' documentation
+title: WSLD 18/19 - Assignment 1 CI - Teachers' documentation
 ---
 
 ## Assignment 1
 
 [Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment1)
 
-Introduction assignment. The file to be uploaded is a csv file with two fields, your github username, and your registration number (número de matricula) in the university. The file has to be called yourGithubUsername.csv
+## Configuration assignment 1
+This task is tested by a single script which checks the CSV files using the command *"awk"*.
 
-This file will be used to identify your uploads so its **VERY** important to make sure the contents are correct. In this file reports will also be written recording the assignments you delivered and information about them.
+#### Language
+Other
 
-### Tests:
-* The csv file exists and it is named correctly
-* The csv file has two fields
+#### Setup
+```
+chmod +x ./build/testAssignment1.sh
+chmod +x ./build/comment.sh
+touch err
+```
+#### Job
+```
+./build/testAssignment1.sh 2> err
+```
+#### After Job
+```
+./build/comment.sh
+```
+
+## Script testAssignment1.sh
+
+1. Initialize the exit value variable to 0
+2. Makes an API request to get the username of the user doing the pull request, parses the Json with the command jq to obtain the value, and assigns it to a variable.
+3. Checks if the files Username.csv exists
+    1. If it doesn't, prints an error message and adds 1 to the exit variable.
+    2. If it exists, it check with the command awk if it has two fields.
+        1. If it doesn't, it prints an error message and adds 1 to the exit value.
+        2. If it does, it continues.
+4. The scripts exits with the exit variable value.

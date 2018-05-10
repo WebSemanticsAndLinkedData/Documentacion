@@ -1,5 +1,5 @@
 ---
-title: WSDL 18/19 - Teachers' Documentation 
+title: WSDL 18/19 - Teachers' Documentation
 ---
 
 ## General structure of each repository
@@ -38,7 +38,7 @@ This instructions are the core of the continuous integration build and will mark
 ```
 We redirect the standard error output to the "*err*" file we created before. This is done to check later if there were any errors (the "*err*" file wont be emtpy) and to not fill the logs of the build with those error messages.
 
-There is an option to create parallel jobs which would be executed at the same time. This can be used to speed up the process of testing. In this specific use case there doesnt seem to be a lot of opportunities to do something like that because most tests rely on the previous ones having passed, but it is interesting to mention because it can be helpful in the future in other tasks. 
+There is an option to create parallel jobs which would be executed at the same time. This can be used to speed up the process of testing. In this specific use case there doesnt seem to be a lot of opportunities to do something like that because most tests rely on the previous ones having passed, but it is interesting to mention because it can be helpful in the future in other tasks.
 
 ### After Job
 Finally, we configure the instructions to be executed when the build is finishing. In this case we will call the script file in charge of creating the comments in the pull-request tested in Github.
@@ -59,37 +59,18 @@ In the dashboard in the main page of semaphore you can see listed all repositori
 # Description of the test of each assignment
 Here there is a list of links to the specific documentation about the continuous integration of each task.
 
-	* [Common test files to all tasks]( TODO )
-	* [Assignment 1 CI]( TODO )
-	* [Assignment 2 CI]( TODO )
-	* [Assignment 3 CI]( TODO )
-	
-	
-	
-	
+	* [Common test files to all tasks]( https://github.com/WebServicesAndLinkedData/Common_CI )
+	* [Assignment 1 CI]( https://github.com/WebServicesAndLinkedData/Assignment1_CI )
+	* [Assignment 2 CI]( https://github.com/WebServicesAndLinkedData/Assignment2_CI )
+	* [Assignment 3 CI]( https://github.com/WebServicesAndLinkedData/Assignment3_CI )
 
-#### comment.sh
-Este fichero es común a todas las tareas por lo que será descritó aqui de forma común
-1. Comprueba si el fichero *err* existe y no está vacio
-    1. Si existe se parsea su contenido con el mandato *sed* para reemplazar carácteres invalidos para el Json
-    2. Si no existe se establece un mensaje de exito por defecto
-2. Se realiza la petición API para enviar el comentario
 
-## Tests tarea 1
-En esta tarea se ejecuta un script simple que evalua el fichero CSV.
-#### testCSV.sh
-Language: Other
-Setup:
-Jobs:
-After Job:
-1. Inicializa la variable de error a 0
-2. Obtiene mediante una petición API a GitHub los datos de la Pull Request que son parseados con jq y se obtiene el nombre de usuario
-3. Se comprueba si existe el fichero NombreDeUsuario.csv
-    1. Si no existe muestra un mensaje de error y sale
-    2. Si existe comprueba si todas las lineas tienen dos campos
-        1. Si no se cumple se muestra un mensaje de error y sale
-        2. Si se cumple no hace nada
-4. Termina y sale con estado el número de errores encontrados
+
+
+
+
+
+
 
 ## Tests tarea 2
 En esta tarea para realizar los tests, se ejecuta un *jar* pre-compilado por parte del profesor y se analizan los ficheros entregados por el alumno. Este *jar* se encuentra en la carpeta test.
