@@ -1,17 +1,28 @@
 ---
-title: WSLD 18/19 - Assignment 3 - Students' documentation
+title: WSLD 18/19 - Assignment 3 CI - Teachers' documentation
 ---
 
 ## Assignment 3
 
-[Link to the repository of this assignment] TODO
+[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment3)
 
-This assignment consists in the coding of a simple program using the jena library and doing a simple tasks on a given dataset in the resources section. The files to be completed are located in src/main/java/upm/oeg/wsld/jena, specifically Task06 and Task07. This files need to be completed and uploaded in a directory named yourGithubUsername-yourNumber, and located inside your personal copy of the files Task06.java and Task07.java with that same name.
+## Configuration assignment 3
 
-The number on the folder must be the same as your registration number in the first assignment
+#### Language
 
-###Tests:
-* The directory of the student exists
-* The Task#.java files exists inside that directory
-* The task files compile correctly
-* The task files pass the JUnit tests specified in src/test/java/upm/oeg/wsld/jena
+#### Setup
+```
+chmod +x ./build/testAssignment3.sh
+chmod +x ./build/comment.sh
+touch err
+```
+#### Job
+```
+./build/testAssignment3.sh 2> err
+```
+#### After Job
+```
+./build/comment.sh
+```
+
+## Script testAssignment3.sh

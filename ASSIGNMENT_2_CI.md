@@ -1,13 +1,28 @@
 ---
-title: WSLD 18/19 - Assignment 2 - Students' documentation
+title: WSLD 18/19 - Assignment 2 CI - Teachers' documentation
 ---
 
 ## Assignment 2
 
-[Link to the repository of this assignment] TODO
+[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment2)
 
-This assignment consists in creating a small dataset using the rdf and ttl formats, as well as a representation of that data in an image with extension png. This files will be uploaded directly on the root of the repository and have to be named yourGithubUsername.rdf, yourGithubUsername.ttl, yourGithubUsername.png
+## Configuration assignment 2
 
-###Tests:
-* The png, rdf, and ttl files exist with the correct name
-* The rdf and ttl files are well formed
+#### Language
+
+#### Setup
+```
+chmod +x ./build/testAssignment2.sh
+chmod +x ./build/comment.sh
+touch err
+```
+#### Job
+```
+./build/testAssignment2.sh 2> err
+```
+#### After Job
+```
+./build/comment.sh
+```
+
+## Script testAssignment2.sh

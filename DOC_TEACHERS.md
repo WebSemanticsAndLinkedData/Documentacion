@@ -9,7 +9,9 @@ All the repositories will have a directory build where the files involved in tes
 [Semaphore](https://semaphoreci.com/) has been chosen as the tool used to keep continuous integrated the repositories. To get started, login in their web with your github credentials and grant the permissions it requires. These permissions will be used to send mail notifications which can be disabled from the settings menu. On your first login in the service a windows will be shown to grant access to the services to all repositories you want to test. You can select them now, or add them manually later.
 
 ## Configuring builds for a repository on Semaphore
-To start making tests continous integration in a repository, click on the top section on the "*Create new > Project*" and select the repository you want. If the repository is part of an organization you will need to have granted Semaphore access to it. You can do it in Github in your profile in "*Settings > Applications > Authorized OAuth Apps > Semaphore*" and on the bottom section you will see a.ll organizations you can grant access to. Click "*Grant*" to the organization of the subject to set up the repositories in semaphore. Keep in mind that these changes may take a few minutes to be shown in the semaphore webpage.
+To start making tests continous integration in a repository, click on the top section on the "*Create new > Project*" and select the repository you want. If the repository is part of an organization you will need to have granted Semaphore access to it. You can do it in Github in your profile in "*Settings > Applications > Authorized OAuth Apps > Semaphore*" and on the bottom section you will see a.ll organizations you can grant access to. Click "*Grant*" to the organization of the subject to set up the repositories in semaphore. Now in the "*Create new > Project*" press the refresh button to see the organization added.
+
+![Granting access to the organization in GitHub](https://github.com/WebServicesAndLinkedData/Documentacion/images/grantAccessSemaphore.png)<br>*Steps to access the granting access menu in GitHub website*
 
 Once this is done and you have selected the specific repository you want, you will have to choose one branch to test, usually master, and the owner of the project in semaphore. After this, an automatic scan will start to detect the main language of the repository. You can skip this step if you want clicking "*Skip the analysis*" as you can select the language manually in the next screen.
 
@@ -45,6 +47,10 @@ Finally, we configure the instructions to be executed when the build is finishin
 ```bash
 ./build/comment.sh
 ```
+
+### After configuring the project
+
+After having done this, an automatic first build will be launched. This build will fail, but even so it is important to not cancel it, otherwise next pull request will not trigger a build until this first build is finished.
 
 ## Environment variables
 For the correct functioning of some scripts it is needed to include sensitive information as authorization tokens to make api requests. This values cannot be stored in plaintext in the scripts directly as it would be a security risk, so we use the environment variables feature in Semaphore.
