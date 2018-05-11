@@ -24,18 +24,18 @@ Note: You can now select the language on a drop-down on the top. This language w
 Instructions to be executed before doing any test task. These are usually configuration tasks for other files, set up variables, paths, etc.
 
 For this specific use case of the subject, first grant execution permission to the scripts files used in the builds.
-```bash
+```
 chmod +x ./build/scriptFile.sh
 ```
 We will do a command like this for every bash file which is going to be used in the build directory of the repository
 We will also create an empty file "*err*" to write the results of the tests if something goes wrong:
-```bash
+```
 touch err
 ```
 
 ### Jobs
 This instructions are the core of the continuous integration build and will mark the build as valid if all instructions are completed with exit status 0, or failed in any other case. Mainly we will call here the scripts we granted execution permissions in the setup step:
-```bash
+```
 ./build/ficheroTest.sh 2> err
 ```
 We redirect the standard error output to the "*err*" file we created before. This is done to check later if there were any errors (the "*err*" file wont be emtpy) and to not fill the logs of the build with those error messages.
@@ -44,7 +44,7 @@ There is an option to create parallel jobs which would be executed at the same t
 
 ### After Job
 Finally, we configure the instructions to be executed when the build is finishing. In this case we will call the script file in charge of creating the comments in the pull-request tested in Github.
-```bash
+```
 ./build/comment.sh
 ```
 
@@ -65,7 +65,7 @@ In the dashboard in the main page of semaphore you can see listed all repositori
 # Description of the test of each assignment
 Here there is a list of links to the specific documentation about the continuous integration of each task.
 
-	* [Common test files to all tasks](https://webservicesandlinkeddata.github.io/Documentacion/Common_CI)
-	* [Assignment 1 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_1_CI)
-	* [Assignment 2 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_2_CI)
-	* [Assignment 3 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_3_CI)
+ * [Common test files to all tasks](https://webservicesandlinkeddata.github.io/Documentacion/Common_CI)
+ * [Assignment 1 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_1_CI)
+ * [Assignment 2 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_2_CI)
+ * [Assignment 3 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_3_CI)
