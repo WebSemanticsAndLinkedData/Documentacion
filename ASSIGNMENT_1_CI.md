@@ -12,7 +12,7 @@ This task is tested by a single script which checks the CSV files using the comm
 #### Language
 Other
 
-#### Setuplkl
+#### Setup
 ```
 chmod +x ./build/testAssignment1.sh
 chmod +x ./build/comment.sh
