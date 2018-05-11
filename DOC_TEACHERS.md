@@ -66,6 +66,6 @@ In the dashboard in the main page of semaphore you can see listed all repositori
 Here there is a list of links to the specific documentation about the continuous integration of each task.
 
 	* [Common test files to all tasks](https://webservicesandlinkeddata.github.io/Documentacion/Common_CI)
-	* [Assignment 1 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment1_CI)
-	* [Assignment 2 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment2_CI)
-	* [Assignment 3 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment3_CI)
+	* [Assignment 1 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_1_CI)
+	* [Assignment 2 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_2_CI)
+	* [Assignment 3 CI](https://webservicesandlinkeddata.github.io/Documentacion/Assignment_3_CI)
