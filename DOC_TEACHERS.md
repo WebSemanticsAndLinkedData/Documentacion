@@ -11,7 +11,7 @@ All the repositories will have a directory build where the files involved in tes
 ## Configuring builds for a repository on Semaphore
 To start making tests continous integration in a repository, click on the top section on the "*Create new > Project*" and select the repository you want. If the repository is part of an organization you will need to have granted Semaphore access to it. You can do it in Github in your profile in "*Settings > Applications > Authorized OAuth Apps > Semaphore*" and on the bottom section you will see a.ll organizations you can grant access to. Click "*Grant*" to the organization of the subject to set up the repositories in semaphore. Now in the "*Create new > Project*" press the refresh button to see the organization added.
 
-![Granting access to the organization in GitHub](https://github.com/WebServicesAndLinkedData/Documentacion/images/grantAccessSemaphore.png)<br>*Steps to access the granting access menu in GitHub website*
+![Granting access to the organization in GitHub](https://raw.githubusercontent.com/WebServicesAndLinkedData/Documentacion/master/images/grantAccessSemaphore.png)<br>*Steps to access the granting access menu in GitHub website*
 
 Once this is done and you have selected the specific repository you want, you will have to choose one branch to test, usually master, and the owner of the project in semaphore. After this, an automatic scan will start to detect the main language of the repository. You can skip this step if you want clicking "*Skip the analysis*" as you can select the language manually in the next screen.
 
