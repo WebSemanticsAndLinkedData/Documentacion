@@ -16,11 +16,17 @@ Version: 8u151
 #### Setup
 ```
 chmod +x ./build/testAssignment2.sh
+
 chmod +x ./build/comment.sh
+
 touch err
 ```
 #### Job
 ```
+diff_result=$(git diff build/)
+
+if [ "$diff_result" = "" ] ; then (exit 0) ; else echo "Build files modified!!!\nRevert the changes and try again." > err ; (exit 1) ;  fi
+
 ./build/testAssignment2.sh 2> err
 ```
 #### After Job

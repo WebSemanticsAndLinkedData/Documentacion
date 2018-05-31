@@ -34,13 +34,24 @@ touch err
 ```
 
 ### Jobs
-This instructions are the core of the continuous integration build and will mark the build as valid if all instructions are completed with exit status 0, or failed in any other case. Mainly we will call here the scripts we granted execution permissions in the setup step:
+This instructions are the core of the continuous integration build and will mark the build as valid if all instructions are completed with exit status 0, or failed in any other case. Mainly we will call here the scripts we granted execution permissions in the setup step.
+
+First of all, we need to check if the build files have been modified. The way all Continuous Integration systems work is that they test the files submitted by the user, so if the tests have been altered the results could be incorrect. This can be prevented by checking with some instructions in semaphore to see if the files have been modified.
+```
+diff_result=$(git diff build/)
+
+if [ "$diff_result" = "" ] ; then (exit 0) ; else echo "Build files modified!!!\nRevert the changes and try again." > err ; (exit 1) ;  fi
+```
+
+This instructions will check the difference between the remote build files and the ones submitted by the student, and will exit with 1 if they have been modified, printing an error message to the *err* file.
+
+After we have made sure the build files are the correct ones we can execute the tests with the following command:
 ```
 ./build/ficheroTest.sh 2> err
 ```
 We redirect the standard error output to the "*err*" file we created before. This is done to check later if there were any errors (the "*err*" file wont be emtpy) and to not fill the logs of the build with those error messages.
 
-There is an option to create parallel jobs which would be executed at the same time. This can be used to speed up the process of testing. In this specific use case there doesnt seem to be a lot of opportunities to do something like that because most tests rely on the previous ones having passed, but it is interesting to mention because it can be helpful in the future in other tasks.
+There is an option to create parallel jobs which would be executed at the same time. This can be used to speed up the process of testing. In this specific use case there doesn't seem to be a lot of opportunities to do something like that because most tests rely on the previous ones having passed, but it is interesting to mention because it can be helpful in the future in other tasks.
 
 ### After Job
 Finally, we configure the instructions to be executed when the build is finishing. In this case we will call the script file in charge of creating the comments in the pull-request tested in Github.
