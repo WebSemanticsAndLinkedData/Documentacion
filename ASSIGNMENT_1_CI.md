@@ -39,7 +39,7 @@ if [ "$diff_result" = "" ] ; then (exit 0) ; else echo "Build files modified!!!\
 2. Makes an API request to get the username of the user doing the pull request, parses the Json with the command jq to obtain the value, and assigns it to a variable.
 3. Checks if the files Username.csv exists
     1. If it doesn't, prints an error message and adds 1 to the exit variable.
-    2. If it exists, it check with the command awk if it has two fields.
+    2. If it exists, it check with the command awk if it has the three fields.
         1. If it doesn't, it prints an error message and adds 1 to the exit value.
         2. If it does, it continues.
 4. The scripts exits with the exit variable value.
