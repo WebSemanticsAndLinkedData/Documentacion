@@ -4,7 +4,7 @@ title: WSLD 18/19 - Students' documentation
 
 ## Basic guide to Git and GitHub
 
- * First of all, create a Github account. It is totally free and you need it to hand the assignments of the subject. 
+ * First of all, create a Github account. It is totally free and you need it to hand the assignments of the subject.
  * Download and install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) in your operative system. If you don't want to pollute your global workspace with it, there is available a portable version which doesn't need installation.  
  * Start the git bash and configure your authentication credentials:
  ```git
@@ -36,7 +36,7 @@ The steps shown here must be used with each of the repositories of the assignmen
 
 The structure of the organization will be split in different repositories for each one of the assignments. You will have to do the previously written steps for all of them and upload your work according to the guidelines of each one of the assignments, which will be specified in the same repository and here.
 
-## About submitting your work 
+## About submitting your work
 
 The upload of your work will have to follow the standard procedure to contributing to a repository in github. This means you need to fork the repository and clone it in your computer, add and make the changes in the files involved, commit and upload them to your remote copy of the repository, and create a pull-request to the repository of the subject to be accepted by the teachers.
 
@@ -50,7 +50,7 @@ Once this is done, from your browser navigate to your github repository and subm
 
 ## About the continuous integration and tests
 
-After doing a pull request for any of the repositories of the subject, a configured service will test those files and check if they are valid. These tests can range from checking if the files exist, to run code and unitary test to see the correct behaviour of the submitted code. What is expected of your work from the point of view of these tests will be specified in the section of the corresponding assignment.
+After doing a pull request for any of the repositories of the subject, a configured service will test those files and check if they are valid. These tests can range from checking if the files exist, to run code and unitary test to see the correct behavior of the submitted code. What is expected of your work from the point of view of these tests will be specified in the section of the corresponding assignment.
 
 After these tests have passed, a message will be submitted to your pull request informing of the results, as well as a message of what errors have happened in case there have been any.
 
@@ -60,4 +60,4 @@ You can find descriptions of each one of the assignments in the next links:
  * [Assignment 1](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_1)
  * [Assignment 2](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_2)
  * [Assignment 3](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_3)
- 
+ * [HandsOn](https://webservicesandlinkeddata.github.io/Documentacion/HANDSON)
