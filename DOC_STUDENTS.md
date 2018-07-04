@@ -12,7 +12,7 @@ title: WSLD 18/19 - Students' documentation
  $ git config --global user.email your_mail@here.com
  ```
  * In the github page of the repository, fork it with the button at the top-right of the screen [TODO] and add it to your account. This repository will be your personal version where you will add your change before submiting them to the subject's one.
- * Clone your personal version of the repository. This will make a local copy of the repository, where you will make changes before uploading it to your remote personal version of the repository. First copy the clone url with the green button using HTTPS [TODO]. Then use the next command in your git bash to download it to your computer:
+ * Clone your personal version of the repository. This will make a local copy of the repository, where you will make changes before uploading it to your remote personal version of the repository. First copy the clone url with the green button using HTTPS. Then use the next command in your git bash to download it to your computer:
 ```git
 $ git clone url
 ```
