@@ -4,10 +4,10 @@ title: WSLD 18/19 - Assignment 2 CI - Teachers' documentation
 
 ## Assignment 2
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment2)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/Assignment2)
 
 ## Configuration assignment 2
-In this task, in order to test the data files of the students, a jar will be executed with the tests pre-compiled. The code of the *jar* file can be found [here](https://github.com/WebServicesAndLinkedData/OtherCode/tree/master/ass2%20jar%20src%20code)
+In this task, in order to test the data files of the students, a jar will be executed with the tests pre-compiled. The code of the *jar* file can be found [here](https://github.com/WebSemanticsAndLinkedData/OtherCode/tree/master/ass2%20jar%20src%20code)
 
 #### Language
 Java <br>
@@ -19,7 +19,7 @@ chmod +x ./build/testAssignment2.sh
 chmod +x ./build/comment.sh
 chmod +x ./build/generateReport.sh
 touch err
-git remote add upstream https://github.com/WebServicesAndLinkedData/Assignment2 | (exit 0)
+git remote add upstream https://github.com/WebSemanticsAndLinkedData/Assignment2 | (exit 0)
 git fetch upstream
 ```
 #### Job

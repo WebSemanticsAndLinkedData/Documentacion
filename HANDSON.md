@@ -4,7 +4,7 @@ title: WSLD 18/19 - HandsOn - Students' documentation
 
 ## HandsOn assignments
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/HandsOn)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/HandsOn)
 
 In this repository the HandsOn group must submit their projects in a directory named **GroupXX** being "XX" the number with **two digits** of the group. It is recommended to follow the template uploaded in the directory **GroupTemplate**.
 

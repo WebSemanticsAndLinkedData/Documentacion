@@ -4,7 +4,7 @@ title: WSLD 18/19 - Assignment 1 - Students' documentation
 
 ## Assignment 1
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment1)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/Assignment1)
 
 Introduction assignment. The file to be uploaded is a csv file with **THREE** fields, your github username, your registration number (número de matricula) in the university, and your email. The file has to be called **yourGithubUsername.csv**.
 

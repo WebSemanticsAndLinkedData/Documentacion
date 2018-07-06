@@ -4,7 +4,7 @@ title: WSLD 18/19 - Assignment 1 CI - Teachers' documentation
 
 ## Assignment 1
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment1)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/Assignment1)
 
 ## Configuration assignment 1
 This task is tested by a single script which checks the CSV files using the command *"awk"*.
@@ -19,7 +19,7 @@ Other
 chmod +x ./build/testAssignment1.sh
 chmod +x ./build/comment.sh
 touch err
-git remote add upstream https://github.com/WebServicesAndLinkedData/Assignment1 | (exit 0)
+git remote add upstream https://github.com/WebSemanticsAndLinkedData/Assignment1 | (exit 0)
 git fetch upstream
 ```
 #### Job

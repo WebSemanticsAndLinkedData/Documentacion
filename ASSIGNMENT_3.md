@@ -4,7 +4,7 @@ title: WSLD 18/19 - Assignment 3 - Students' documentation
 
 ## Assignment 3
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment3)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/Assignment3)
 
 This assignment consists in the coding of a simple program using the jena library and doing a simple tasks on a given dataset in the resources section. The files to be completed are located in src/main/java/upm/oeg/wsld/jena, specifically **Task06.java** and **Task07.java**. This files need to be completed and uploaded in a directory named **yourGithubUsername-yourNumber**, and located inside your personal copy of the files Task06.java and Task07.java with that same name.
 

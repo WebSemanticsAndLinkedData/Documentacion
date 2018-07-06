@@ -4,7 +4,7 @@ title: WSLD 18/19 - HandsOn CI - Teachers' documentation
 
 ## HandsOn assignments
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/HandsOn)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/HandsOn)
 
 ## Configuration HandsOn
 This tasks checks that the directory of the group the user uploading belongs to exists, and compile and test its contents.
@@ -18,7 +18,7 @@ Version: 8u151
 chmod +x ./build/testHandsOn.sh
 chmod +x ./build/comment.sh
 touch err
-git remote add upstream https://github.com/WebServicesAndLinkedData/HandsOn | (exit 0)
+git remote add upstream https://github.com/WebSemanticsAndLinkedData/HandsOn | (exit 0)
 git fetch upstream
 ```
 #### Job

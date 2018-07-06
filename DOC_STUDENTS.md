@@ -57,7 +57,7 @@ After these tests have passed, a message will be submitted to your pull request 
 # Assignments
 You can find descriptions of each one of the assignments in the next links:
 
- * [Assignment 1](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_1)
- * [Assignment 2](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_2)
- * [Assignment 3](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_3)
- * [HandsOn](https://webservicesandlinkeddata.github.io/Documentacion/HANDSON)
+ * [Assignment 1](https://websemanticsandlinkeddata.github.io/Documentacion/ASSIGNMENT_1)
+ * [Assignment 2](https://websemanticsandlinkeddata.github.io/Documentacion/ASSIGNMENT_2)
+ * [Assignment 3](https://websemanticsandlinkeddata.github.io/Documentacion/ASSIGNMENT_3)
+ * [HandsOn](https://websemanticsandlinkeddata.github.io/Documentacion/HANDSON)

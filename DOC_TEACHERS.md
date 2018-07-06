@@ -11,7 +11,7 @@ All the repositories will have a directory build where the files involved in tes
 ## Configuring builds for a repository on Semaphore
 To start making tests of continuous integration in a repository, click on the top section on the "*Create new > Project*" and select the repository you want. If the repository is part of an organization you will need to have granted Semaphore access to it. You can do it in GitHub in your profile in "*Settings > Applications > Authorized OAuth Apps > Semaphore*" and on the bottom section you will see all organizations you can grant access to. Click "*Grant*" to the organization of the subject to set up the repositories in semaphore. Now in the "*Create new > Project*" press the refresh button to see the organization added.
 
-![Granting access to the organization in GitHub](https://raw.githubusercontent.com/WebServicesAndLinkedData/Documentacion/master/images/grantAccessSemaphore.png)<br>*Steps to access the granting access menu in GitHub website*
+![Granting access to the organization in GitHub](https://raw.githubusercontent.com/WebSemanticsAndLinkedData/Documentacion/master/images/grantAccessSemaphore.png)<br>*Steps to access the granting access menu in GitHub website*
 
 Once this is done and you have selected the specific repository you want, you will have to choose one branch to test, usually master, and the owner of the project in semaphore. After this, an automatic scan will start to detect the main language of the repository. You can skip this step if you want clicking "*Skip the analysis*" as you can select the language manually in the next screen.
 
@@ -34,7 +34,7 @@ touch err
 ```
 We will also add an upstream to the original repository to check the original files the pull-request is based on. An (exit 0) is added in case the upstream is already defined, so the setup command never fails (otherwise the build will be stopped before even start).
 ```
-git remote add upstream https://github.com/WebServicesAndLinkedData/XXXXX | (exit 0)
+git remote add upstream https://github.com/WebSemanticsAndLinkedData/XXXXX | (exit 0)
 git fetch upstream
 ```
 
@@ -89,8 +89,8 @@ In the dashboard in the main page of semaphore you can see listed all repositori
 # Description of the test of each assignment
 The contents described here are general guidelines for all projects. Specific definitions of each task continuous integration can be found here:
 
- * [Common test files to all tasks](https://webservicesandlinkeddata.github.io/Documentacion/COMMON_CI)
- * [Assignment 1 CI](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_1_CI)
- * [Assignment 2 CI](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_2_CI)
- * [Assignment 3 CI](https://webservicesandlinkeddata.github.io/Documentacion/ASSIGNMENT_3_CI)
-  * [HandsOn CI](https://webservicesandlinkeddata.github.io/Documentacion/HANDSON_CI)
+ * [Common test files to all tasks](https://websemanticsandlinkeddata.github.io/Documentacion/COMMON_CI)
+ * [Assignment 1 CI](https://websemanticsandlinkeddata.github.io/Documentacion/ASSIGNMENT_1_CI)
+ * [Assignment 2 CI](https://websemanticsandlinkeddata.github.io/Documentacion/ASSIGNMENT_2_CI)
+ * [Assignment 3 CI](https://websemanticsandlinkeddata.github.io/Documentacion/ASSIGNMENT_3_CI)
+ * [HandsOn CI](https://websemanticsandlinkeddata.github.io/Documentacion/HANDSON_CI)

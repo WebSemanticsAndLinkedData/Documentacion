@@ -4,7 +4,7 @@ title: WSLD 18/19 - Assignment 3 CI - Teachers' documentation
 
 ## Assignment 3
 
-[Link to the repository of this assignment](https://github.com/WebServicesAndLinkedData/Assignment3)
+[Link to the repository of this assignment](https://github.com/WebSemanticsAndLinkedData/Assignment3)
 
 ## Configuration assignment 3
 This tasks compiles the code submitted by the student using maven and then executes the JUnit tests located in src/test/java/upm/oeg/wsld/jena.
@@ -19,7 +19,7 @@ chmod +x ./build/testAssignment3.sh
 chmod +x ./build/comment.sh
 chmod +x ./build/generateReport.sh
 touch err
-git remote add upstream https://github.com/WebServicesAndLinkedData/Assignment3 | (exit 0)
+git remote add upstream https://github.com/WebSemanticsAndLinkedData/Assignment3 | (exit 0)
 git fetch upstream
 ```
 #### Job
